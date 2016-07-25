@@ -1,0 +1,19 @@
+[
+  {
+    "modid": "framework",
+    "name": "Framework",
+    "description": "Core Mod For All DaNK Mods",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "TheCodedOne",
+      "Prospector"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
