@@ -7,9 +7,13 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 public abstract class MachineBase extends BlockContainer {
 
@@ -64,10 +68,19 @@ public abstract class MachineBase extends BlockContainer {
 	}
 
 	@Override
+	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+		TileEntityMachine tile = TileHelper.getTileEntity(worldIn,pos,TileEntityMachine.class);
+		NBTTagCompound tag = stack.getTagCompound();
+		if(tile!=null&&tag!=null&&tag.hasKey("SavedData"))
+			tile.readFromNBT(tag);
+		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
+	}
+
+	@Override
 	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
 		boolean active = state.getValue(BlockStates.ACTIVE);
 		if(active)
-			return 15;
+			return 10;
 		return super.getLightValue(state, world, pos);
 	}
 }

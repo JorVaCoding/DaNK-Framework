@@ -1,7 +1,9 @@
 package com.dank.framework.util;
 
-import com.dank.thermalcontraction.ModInfo;
+import com.dank.framework.Framework;
 import net.minecraft.client.resources.I18n;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public enum LanguageHelper {
     MESSAGE("message"),
@@ -21,10 +23,11 @@ public enum LanguageHelper {
         this.name = name;
     }
 
+    @SideOnly(Side.CLIENT)
     public String translateMessage(String message) {
         if (this == NONE)
             return I18n.format(message);
-        return I18n.format(String.format("%s.%s.%s", this.name, ModInfo.MOD_ID, message));
+        return I18n.format(String.format("%s.%s.%s", this.name, Framework.MOD_ID, message));
     }
 
 }

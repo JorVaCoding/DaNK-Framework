@@ -16,6 +16,32 @@ apply plugin: "net.minecraftforge.gradle.forge"
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+
+    maven {
+        name 'Dankhax'
+        url 'http://maven.epoxide.xyz'
+    }
+    maven {
+        name = "Amadornes"
+        url "http://maven.amadornes.com/"
+    }
+    maven {
+        name 'Mobius'
+        url 'http://mobiusstrip.eu/maven'
+    }
+    maven {
+        name 'JEI'
+        url "http://dvs1.progwml6.com/files/maven"
+    }
+    maven {
+        name 'TOP'
+        url "http://maven.tterrag.com/"
+    }
+}
+
 version = "0.0.0"
 group = "com.dank"
 archivesBaseName = "framework"
@@ -38,6 +64,10 @@ repositories {
 }
 
 dependencies {
+    compile "mcp.mobius.waila:Waila:1.7.0-B3_1.9.4"
+    compile "net.darkhax.tesla:Tesla:1.10.2-1.2.1.40"
+    compile "mcjty.theoneprobe:TheOneProbe:1.10-1.0.12-25"
+    deobfCompile "mezz.jei:jei_1.10.2:3.7.8.234"
 }
 
 processResources {

@@ -1,12 +1,12 @@
 package com.dank.framework.util;
 
-import com.dank.thermalcontraction.ModInfo;
+import com.dank.framework.Framework;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class LogHelper {
-    private static Logger logger = LogManager.getLogger(ModInfo.MOD_NAME);
+    private static Logger logger = LogManager.getLogger(Framework.MOD_NAME);
 
     public static void log(Level logLevel, String message) {
         logger.log(logLevel, message);
