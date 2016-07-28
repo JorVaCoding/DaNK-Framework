@@ -47,6 +47,12 @@ public abstract class TileEntityBase extends TileEntity{
 		return new SPacketUpdateTileEntity(this.pos, 1, data);
 	}
 
+	public void markForFullUpdate() {
+		this.markForUpdate();
+		this.markForLightUpdate();
+		this.markDirty();
+	}
+
 	@Override
 	public NBTTagCompound getUpdateTag() {
 		return writeToNBT(new NBTTagCompound());
