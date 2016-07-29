@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.List;
 
-public class ItemIngot extends Item {
+public class ItemGear extends Item {
 
 	public static final String[] ores = new String[]{
 			"copper",
@@ -23,15 +23,17 @@ public class ItemIngot extends Item {
 			"mithril",
 			"bronze",
 			"invar",
+			"gold",
+			"iron",
 			"electrum",
 			"signalum",
 			"lumium",
 			"enderium",
 	};
 
-	public ItemIngot() {
-		this.setUnlocalizedName("framework.ingot");
-		this.setRegistryName(Framework.MOD_ID, "ingot");
+	public ItemGear() {
+		this.setUnlocalizedName("framework.gear");
+		this.setRegistryName(Framework.MOD_ID, "gear");
 		this.setCreativeTab(CreativeTabs.MATERIALS);
 		this.setHasSubtypes(true);
 		register();

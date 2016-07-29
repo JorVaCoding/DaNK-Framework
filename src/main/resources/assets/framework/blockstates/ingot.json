@@ -11,62 +11,67 @@
     "type": {
       "copper": {
         "textures": {
-          "layer0": "storage:items/ores/IngotCopper"
+          "layer0": "framework:items/ores/IngotCopper"
+        }
+      },
+      "bronze": {
+        "textures": {
+          "layer0": "framework:items/ores/IngotBronze"
         }
       },
       "tin": {
         "textures": {
-          "layer0": "storage:items/ores/IngotTin"
+          "layer0": "framework:items/ores/IngotTin"
         }
       },
       "silver": {
         "textures": {
-          "layer0": "storage:items/ores/IngotSilver"
+          "layer0": "framework:items/ores/IngotSilver"
         }
       },
       "lead": {
         "textures": {
-          "layer0": "storage:items/ores/IngotLead"
+          "layer0": "framework:items/ores/IngotLead"
         }
       },
       "ferrous": {
         "textures": {
-          "layer0": "storage:items/ores/IngotNickel"
+          "layer0": "framework:items/ores/IngotNickel"
         }
       },
       "shiny": {
         "textures": {
-          "layer0": "storage:items/ores/IngotPlatinum"
+          "layer0": "framework:items/ores/IngotPlatinum"
         }
       },
       "signalum": {
         "textures": {
-          "layer0": "storage:items/ores/IngotSignalum"
+          "layer0": "framework:items/ores/IngotSignalum"
         }
       },
-      "mana": {
+      "mithril": {
         "textures": {
-          "layer0": "storage:items/ores/IngotMithril"
+          "layer0": "framework:items/ores/IngotMithril"
         }
       },
       "invar": {
         "textures": {
-          "layer0": "storage:items/ores/IngotInvar"
+          "layer0": "framework:items/ores/IngotInvar"
         }
       },
       "enderium": {
         "textures": {
-          "layer0": "storage:items/ores/IngotEnderium"
+          "layer0": "framework:items/ores/IngotEnderium"
         }
       },
       "electrum": {
         "textures": {
-          "layer0": "storage:items/ores/IngotElectrum"
+          "layer0": "framework:items/ores/IngotElectrum"
         }
       },
       "lumium": {
         "textures": {
-          "layer0": "storage:items/ores/IngotLumium"
+          "layer0": "framework:items/ores/IngotLumium"
         }
       }
     }

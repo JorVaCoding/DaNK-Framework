@@ -11,27 +11,36 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.List;
 
-public class ItemIngot extends Item {
+public class ItemDust extends Item {
 
 	public static final String[] ores = new String[]{
 			"copper",
 			"tin",
 			"silver",
+			"blizz",
+			"charcoal",
+			"coal",
+			"cryotheum",
+			"sulfur",
 			"lead",
 			"ferrous",
 			"shiny",
 			"mithril",
+			"niter",
+			"mana",
 			"bronze",
 			"invar",
+			"gold",
+			"iron",
 			"electrum",
 			"signalum",
 			"lumium",
 			"enderium",
 	};
 
-	public ItemIngot() {
-		this.setUnlocalizedName("framework.ingot");
-		this.setRegistryName(Framework.MOD_ID, "ingot");
+	public ItemDust() {
+		this.setUnlocalizedName("framework.dust");
+		this.setRegistryName(Framework.MOD_ID, "dust");
 		this.setCreativeTab(CreativeTabs.MATERIALS);
 		this.setHasSubtypes(true);
 		register();

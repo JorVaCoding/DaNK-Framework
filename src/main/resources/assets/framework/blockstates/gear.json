@@ -1,0 +1,119 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "builtin/generated",
+    "textures": {
+      "layer0": "blocks/dirt"
+    },
+    "transform": "forge:default-item"
+  },
+  "variants": {
+    "type": {
+      "copper": {
+        "textures": {
+          "layer0": "framework:items/ores/GearCopper"
+        }
+      },
+      "pyrotheum": {
+        "textures": {
+          "layer0": "framework:items/ores/GearPyrotheum"
+        }
+      },
+      "gold": {
+        "textures": {
+          "layer0": "framework:items/ores/GearGold"
+        }
+      },
+      "coal": {
+        "textures": {
+          "layer0": "framework:items/ores/GearCoal"
+        }
+      },
+      "sulfer": {
+        "textures": {
+          "layer0": "framework:items/ores/GearSulfer"
+        }
+      },
+      "cryotheum": {
+        "textures": {
+          "layer0": "framework:items/ores/GearCryotheum"
+        }
+      },
+      "iron": {
+        "textures": {
+          "layer0": "framework:items/ores/GearIron"
+        }
+      },
+      "bronze": {
+        "textures": {
+          "layer0": "framework:items/ores/GearBronze"
+        }
+      },
+      "charcoal": {
+        "textures": {
+          "layer0": "framework:items/ores/GearCharcoal"
+        }
+      },
+      "blizz": {
+        "textures": {
+          "layer0": "framework:items/ores/GearBlizz"
+        }
+      },
+      "tin": {
+        "textures": {
+          "layer0": "framework:items/ores/GearTin"
+        }
+      },
+      "silver": {
+        "textures": {
+          "layer0": "framework:items/ores/GearSilver"
+        }
+      },
+      "lead": {
+        "textures": {
+          "layer0": "framework:items/ores/GearLead"
+        }
+      },
+      "ferrous": {
+        "textures": {
+          "layer0": "framework:items/ores/GearNickel"
+        }
+      },
+      "shiny": {
+        "textures": {
+          "layer0": "framework:items/ores/GearPlatinum"
+        }
+      },
+      "signalum": {
+        "textures": {
+          "layer0": "framework:items/ores/GearSignalum"
+        }
+      },
+      "mithril": {
+        "textures": {
+          "layer0": "framework:items/ores/GearMithril"
+        }
+      },
+      "invar": {
+        "textures": {
+          "layer0": "framework:items/ores/GearInvar"
+        }
+      },
+      "enderium": {
+        "textures": {
+          "layer0": "framework:items/ores/GearEnderium"
+        }
+      },
+      "electrum": {
+        "textures": {
+          "layer0": "framework:items/ores/GearElectrum"
+        }
+      },
+      "lumium": {
+        "textures": {
+          "layer0": "framework:items/ores/GearLumium"
+        }
+      }
+    }
+  }
+}
