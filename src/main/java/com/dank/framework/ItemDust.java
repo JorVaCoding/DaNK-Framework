@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
@@ -66,6 +68,7 @@ public class ItemDust extends Item {
 
 	public void register() {
 		GameRegistry.register(this);
+		registerOreDict();
 		if (Platform.isClient())
 			registerItemRenderer();
 	}
@@ -74,6 +77,12 @@ public class ItemDust extends Item {
 		for (int i = 0; i < ores.length; ++i) {
 			String[] name = ores.clone();
 			registerItemModel(this, i, name[i]);
+		}
+	}
+	public void registerOreDict() {
+		for (int i = 0; i < ores.length; ++i) {
+			String[] name = ores.clone();
+			OreDictionary.registerOre("dust"+ StringUtils.capitalize(name[i]),new ItemStack(this,1,i));
 		}
 	}
 
