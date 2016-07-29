@@ -7,8 +7,6 @@ public class ModItems {
 	public static Item INGOT;
 
 
-
-
 	public static void preInit() {
 		WRENCH = new ItemWrench();
 		INGOT = new ItemIngot();

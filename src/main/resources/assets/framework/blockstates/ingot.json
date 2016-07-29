@@ -1,0 +1,74 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "builtin/generated",
+    "textures": {
+      "layer0": "blocks/dirt"
+    },
+    "transform": "forge:default-item"
+  },
+  "variants": {
+    "type": {
+      "copper": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotCopper"
+        }
+      },
+      "tin": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotTin"
+        }
+      },
+      "silver": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotSilver"
+        }
+      },
+      "lead": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotLead"
+        }
+      },
+      "ferrous": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotNickel"
+        }
+      },
+      "shiny": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotPlatinum"
+        }
+      },
+      "signalum": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotSignalum"
+        }
+      },
+      "mana": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotMithril"
+        }
+      },
+      "invar": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotInvar"
+        }
+      },
+      "enderium": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotEnderium"
+        }
+      },
+      "electrum": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotElectrum"
+        }
+      },
+      "lumium": {
+        "textures": {
+          "layer0": "storage:items/ores/IngotLumium"
+        }
+      }
+    }
+  }
+}

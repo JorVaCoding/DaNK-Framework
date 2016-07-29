@@ -34,6 +34,7 @@ public class ItemIngot extends Item {
 		this.setRegistryName(Framework.MOD_ID, "ingot");
 		this.setCreativeTab(CreativeTabs.MATERIALS);
 		this.setHasSubtypes(true);
+		register();
 	}
 
 	@Override
