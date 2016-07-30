@@ -1,6 +1,12 @@
 package com.dank.framework;
 
+import static com.dank.framework.util.OreDictUtils.dusts;
+
+import java.util.List;
+
+import com.dank.framework.util.OreDictUtils;
 import com.dank.framework.util.Platform;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -8,37 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.List;
 
 public class ItemDust extends Item {
 
-	public static final String[] ores = new String[]{
-			"copper",
-			"tin",
-			"silver",
-			"blizz",
-			"charcoal",
-			"coal",
-			"cryotheum",
-			"sulfur",
-			"lead",
-			"ferrous",
-			"shiny",
-			"mithril",
-			"niter",
-			"mana",
-			"bronze",
-			"invar",
-			"gold",
-			"iron",
-			"electrum",
-			"signalum",
-			"lumium",
-			"enderium",
-	};
 
 	public ItemDust() {
 		this.setUnlocalizedName("framework.dust");
@@ -50,7 +28,7 @@ public class ItemDust extends Item {
 
 	@Override
 	public void getSubItems(Item itemIn, CreativeTabs tab, List<ItemStack> subItems) {
-		for (int meta = 0; meta < ores.length; meta++)
+		for (int meta = 0; meta < dusts.length; meta++)
 		{
 			subItems.add(new ItemStack(itemIn, 1, meta));
 		}
@@ -59,30 +37,24 @@ public class ItemDust extends Item {
 	public String getUnlocalizedName(ItemStack itemStack)
 	{
 		int meta = itemStack.getItemDamage();
-		if (meta < 0 || meta >= ores.length)
+		if (meta < 0 || meta >= dusts.length)
 		{
 			meta = 0;
 		}
-		return super.getUnlocalizedName() + "." + ores[meta];
+		return super.getUnlocalizedName() + "." + dusts[meta];
 	}
 
 	public void register() {
 		GameRegistry.register(this);
-		registerOreDict();
+		OreDictUtils.register(this, dusts, "dust");
 		if (Platform.isClient())
 			registerItemRenderer();
 	}
 
 	public void registerItemRenderer() {
-		for (int i = 0; i < ores.length; ++i) {
-			String[] name = ores.clone();
+		for (int i = 0; i < dusts.length; ++i) {
+			String[] name = dusts.clone();
 			registerItemModel(this, i, name[i]);
-		}
-	}
-	public void registerOreDict() {
-		for (int i = 0; i < ores.length; ++i) {
-			String[] name = ores.clone();
-			OreDictionary.registerOre("dust"+ StringUtils.capitalize(name[i]),new ItemStack(this,1,i));
 		}
 	}
 
